@@ -1,0 +1,15 @@
+@import url(./_active/navigation__link_active.css);
+
+.navigation__link {
+  font-family: 'Roboto','Roboto Slab', sans-serif ;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #B6BCBF;
+  text-decoration: none;
+}
+.navigation__link:hover {
+  color: #fff;
+  transition: .3s;
+}

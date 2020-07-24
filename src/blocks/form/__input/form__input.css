@@ -1,0 +1,18 @@
+.form__input {
+  width: 100%;
+  border-radius: 100px;
+  border: 1px solid #D1D2D6;
+  box-sizing: border-box;
+  background-color: #fff;
+  outline: none;
+  padding: 21px 0 21px 24px;
+}
+
+.form__input::placeholder {
+  font-family: 'Roboto', 'Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #B6BCBF;
+}

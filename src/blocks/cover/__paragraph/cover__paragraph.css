@@ -1,0 +1,11 @@
+.cover__paragraph {
+  font-family: 'Roboto','Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #fff;
+  max-width: 608px;
+  text-align: left;
+  margin-bottom: 64px;
+}

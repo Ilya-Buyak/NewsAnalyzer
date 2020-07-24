@@ -1,0 +1,7 @@
+.navigation__items {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  list-style: none;
+  margin: 0;
+}

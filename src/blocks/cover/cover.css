@@ -1,0 +1,10 @@
+@import url(./__title/cover__title.css);
+@import url(./__paragraph/cover__paragraph.css);
+
+.cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;
+}

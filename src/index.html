@@ -1,16 +1,37 @@
 <!doctype html>
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>main</title>
-  <link rel="stylesheet" href="./src/vendor/normalize.css">
-  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
-</head>
-<body>
-  <a class='a' href="./about.html">nqwewasdaeqwe</a>
-  <script src="<%= htmlWebpackPlugin.files.js %>"></script>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>main</title>
+    <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+  </head>
+  <body class="root">
+    <div class="root__container">
+      <header class="header">
+        <a class="logo" href="./index.html">NewsAnalyzer</a>
+        <nav class="navigation">
+          <ul class="navigation__items">
+            <li class="navigation__item navigation__item_active">
+              <a class="navigation__link navigation__link_active" href="./index.html">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="./about.html">О проекте</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <section class="cover">
+        <h1 class="cover__title">Что в мире творится?</h1>
+        <p class="cover__paragraph">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
+        <form class="form">
+          <input class="form__input" placeholder="Введите тему новости">
+          <button type="button" class="form__button">Искать</button>
+        </form>
+      </section>
+    </div>
+    <script src="<%= htmlWebpackPlugin.files.js %>"></script>
+  </body>
 </html>
