@@ -9,3 +9,18 @@
   text-align: left;
   margin-bottom: 64px;
 }
+
+@media screen and (max-width: 1090px) {
+  .cover__paragraph {
+    margin-bottom: 24px;
+    max-width: 452px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .cover__paragraph {
+    font-size: 20px;
+    line-height: 26px;
+    margin-bottom: 64px;
+  }
+}

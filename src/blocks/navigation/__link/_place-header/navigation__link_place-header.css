@@ -1,0 +1,14 @@
+.navigation__link.navigation__link_place-header {
+  color: #B6BCBF;
+}
+.navigation__link.navigation__link_place-header:hover {
+  color: #fff;
+  opacity: 1;
+  transition: .3s;
+}
+
+@media screen and (max-width: 767px){
+  .navigation__link.navigation__link_place-header {
+    font-size: 16px;
+  }
+}

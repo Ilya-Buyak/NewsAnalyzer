@@ -1,8 +1,8 @@
 @import url(./_active/navigation__item_active.css);
+@import url(./_place-header/navigation__item_place-header.css);
 
 .navigation__item {
   margin-right: 34px;
-  padding-bottom: 30px;
 }
 
 .navigation__item:last-child {

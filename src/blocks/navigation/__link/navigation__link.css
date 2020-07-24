@@ -1,3 +1,5 @@
+@import url(./_place-header/navigation__link_place-header.css);
+@import url(./_place-footer/navigation__link-place-footer.css);
 @import url(./_active/navigation__link_active.css);
 
 .navigation__link {
@@ -6,10 +8,10 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  color: #B6BCBF;
+  color: #1A1B22;
   text-decoration: none;
 }
 .navigation__link:hover {
-  color: #fff;
+  opacity: .5;
   transition: .3s;
 }

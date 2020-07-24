@@ -1,4 +1,9 @@
 .form__input {
+  font-family: 'Roboto','Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
   width: 100%;
   border-radius: 100px;
   border: 1px solid #D1D2D6;
@@ -15,4 +20,16 @@
   font-size: 16px;
   line-height: 22px;
   color: #B6BCBF;
+}
+
+@media screen and (max-width: 1090px){
+  .form__input {
+    padding: 17px 0 17px 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form__input {
+    margin-bottom: 16px;
+  }
 }

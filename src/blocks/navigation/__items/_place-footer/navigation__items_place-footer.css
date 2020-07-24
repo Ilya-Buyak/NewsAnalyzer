@@ -1,0 +1,7 @@
+@media screen and (max-width: 767px) {
+  .navigation__items_place-footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

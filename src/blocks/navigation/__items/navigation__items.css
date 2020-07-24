@@ -1,3 +1,5 @@
+@import url(./_place-footer/navigation__items_place-footer.css);
+
 .navigation__items {
   display: flex;
   justify-content: space-between;
