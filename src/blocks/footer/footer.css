@@ -10,9 +10,17 @@
   padding: 30px 104px;
 }
 
+@media screen and (max-width: 1090px) {
+  .footer {
+    padding: 24px 40px;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .footer {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 20px 16px;
   }
 }

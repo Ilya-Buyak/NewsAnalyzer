@@ -1,0 +1,17 @@
+@import url(./_date/analytics__header-text_date.css);
+
+.analytics__header-text {
+  font-family: 'Roboto','Roboto Slab',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+  margin: 0 50px 0 0;
+}
+
+.analytics__header-text:last-child {
+  margin-right: 0;
+}

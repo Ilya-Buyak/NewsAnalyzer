@@ -4,12 +4,15 @@
   font-weight: 500;
   font-size: 18px;
   line-height: 24px;
-  padding: 15px 70px;
+  padding: 15px 65px;
   border: 1px solid #1A1B22;
   box-sizing: border-box;
   border-radius: 80px;
-  outline: none;
   display: none;
+  color: #1A1B22;
+  text-decoration: none;
+  text-align: center;
+  max-width: 300px;
 }
 
 .commits__button:hover {

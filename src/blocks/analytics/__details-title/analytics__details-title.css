@@ -1,0 +1,15 @@
+.analytics__details-title {
+  font-family: 'Roboto Slab','Roboto',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 0 48px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .analytics__details-title {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+}

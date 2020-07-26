@@ -1,0 +1,17 @@
+.analytics__content {
+ padding: 104px 80px 80px 80px;
+  background-color: #F5F6F7;
+  margin-bottom: -16px;
+}
+
+@media screen and (max-width: 1090px) {
+  .analytics__content {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .analytics__content {
+    padding: 24px 16px 32px 16px;
+  }
+}

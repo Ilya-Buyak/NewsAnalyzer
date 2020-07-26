@@ -1,3 +1,8 @@
-.a {
-  color:red
-}
+@import url(./../../vendor/normalize.css);
+@import url(./../../vendor/fonts.css);
+@import url(./../../blocks/root/root.css);
+@import url(./../../blocks/logo/logo.css);
+@import url(./../../blocks/header/header.css);
+@import url(./../../blocks/navigation/navigation.css);
+@import url(./../../blocks/analytics/analytics.css);
+@import url(./../../blocks/footer/footer.css);

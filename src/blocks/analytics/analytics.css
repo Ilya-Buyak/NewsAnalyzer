@@ -1,0 +1,16 @@
+@import url(./__container/analytics__container.css);
+@import url(./__text/analytics__text.css);
+@import url(./__link/analytics__link.css);
+@import url(./__title/analytics__title.css);
+@import url(./__navigation/analytics__navigation.css);
+@import url(./__paragraph/analytics__paragraph.css);
+@import url(./__span/analytics__span.css);
+@import url(./__content/analytics__content.css);
+@import url(./__details-title/analytics__details-title.css);
+@import url(./__header/analytics__header.css);
+@import url(./__header-text/analytics__header-text.css);
+@import url(./__percents/analytics__percents.css);
+@import url(./__diagram/analytics__diagram.css);
+@import url(./__date/analytics__date.css);
+@import url(./__chart/analytics__chart.css);
+@import url(./__wrapper/analytitcs__wapper.css);
