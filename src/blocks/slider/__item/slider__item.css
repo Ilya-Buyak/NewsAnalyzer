@@ -1,0 +1,21 @@
+.slider__item {
+  text-decoration: none;
+  padding: 24px;
+  margin-right: 16px;
+  background-color: #fff;
+  border-radius: 16px;
+  width: 30%;
+}
+
+@media (max-width: 767px) {
+  .slider__item {
+    width: 40%;
+    max-width: 296px;
+  }
+}
+
+@media (max-width: 550px) {
+  .slider__item {
+    width: calc(100% - 90px);
+  }
+}

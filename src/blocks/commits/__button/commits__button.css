@@ -1,0 +1,26 @@
+.commits__button {
+  font-family: 'Roboto','Roboto Slab',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 15px 70px;
+  border: 1px solid #1A1B22;
+  box-sizing: border-box;
+  border-radius: 80px;
+  outline: none;
+  display: none;
+}
+
+.commits__button:hover {
+  cursor: pointer;
+  opacity: .5;
+  transition: .3s;
+}
+
+@media screen and (max-width: 767px){
+  .commits__button {
+    display: block;
+    margin: 70px auto 0 auto;
+  }
+}

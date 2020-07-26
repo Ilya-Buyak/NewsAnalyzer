@@ -1,0 +1,21 @@
+.commits__link {
+  font-family: 'Roboto','Roboto Slab',sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  display: block;
+  color: #1A1B22;
+  text-decoration: none;
+}
+
+.commits__link:hover {
+  opacity: .7;
+  transition: .3s;
+}
+
+@media screen and (max-width: 767px){
+  .commits__link {
+    display: none;
+  }
+}

@@ -2,10 +2,12 @@
 <html lang="ru">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Анализ новостей">
+    <meta name="keywords" content="news analyzer,news">
+    <meta name="author" content="Ilya Buyak">
+    <title>NewsAnalyzer</title>
+    <link rel="shortcut icon" href="<%= require('./images/fav.ico').default %>" type="image/x-icon">
     <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
   </head>
   <body class="root">
@@ -15,7 +17,7 @@
         <nav class="navigation">
           <ul class="navigation__items">
             <li class="navigation__item navigation__item_place-header navigation__item_active">
-              <a class="navigation__link navigation__link_place-header navigation__link_active" href="./index.html">Главная</a>
+              <p class="navigation__link navigation__link_place-header navigation__link_active">Главная</p>
             </li>
             <li class="navigation__item navigation__item_place-header">
               <a class="navigation__link navigation__link_place-header" href="./about.html">О проекте</a>
@@ -36,7 +38,7 @@
     </div>
     <section class="search-result">
       <div class="preloader"></div>
-      <p class="search-result__paragraph">Идет поиск новостей...</p>
+      <h2 class="search-result__paragraph">Идет поиск новостей...</h2>
     </section>
     <section class="search-result">
       <div class="search-result__not-found"></div>
@@ -44,10 +46,10 @@
       <p class="search-result__paragraph">К сожалению по вашему запросу
         ничего не найдено.</p>
     </section>
-    <section class="search-result ">
+    <main class="search-result ">
       <div class="cards">
         <h2 class="cards__title">Результаты поиска</h2>
-        <a class="cards__link" href="./analytics.html">Посмотреть аналитику &gt;</a>
+        <a class="cards__link" href="./analytics.html">Посмотреть аналитику ></a>
       </div>
       <ul class="cards-items">
         <li class="card">
@@ -80,7 +82,7 @@
         </li>
       </ul>
       <button class="cards__button">Показать еще</button>
-    </section>
+    </main>
     <section class="about-author">
       <div class="about-author__image-container">
         <img src="<%=require('./images/author.jpg').default%>" class="about-author__img" alt="автор">

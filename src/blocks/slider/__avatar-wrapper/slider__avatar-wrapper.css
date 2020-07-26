@@ -1,0 +1,6 @@
+.slider__avatar-wrapper {
+  width: 48px;
+  height: 48px;
+  overflow: hidden;
+  border-radius: 50%;
+}

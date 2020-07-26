@@ -33,6 +33,7 @@
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
     "babel-polyfill": "^6.26.0",
+    "flickity": "^2.2.1",
     "style-loader": "^1.2.1"
   }
 }
