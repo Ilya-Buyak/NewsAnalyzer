@@ -15,7 +15,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].[chanckhash].js'
+    filename: 'pages/[name]/[name].[chanckhash].js'
   },
   module: {
     rules: [{
@@ -51,7 +51,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: '[name].[contenthash].css',
+      filename: 'pages/[name]/[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -62,13 +62,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/pages/about/about.html',
-      filename: 'about.html',
+      filename: 'pages/about/about.html',
       chunks: ['about']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/pages/analytics/analytics.html',
-      filename: 'analytics.html',
+      filename: 'pages/analytics/analytics.html',
       chunks: ['analytics']
     }),
     new OptimizeCssAssetsPlugin({
