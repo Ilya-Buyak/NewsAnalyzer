@@ -1,0 +1,36 @@
+.form__button {
+  top: 0;
+  right: 0;
+  background-color: #2F71E5;
+  padding: 19px 54px;
+  border-radius: 100px;
+  border: 2px solid transparent;
+  outline: none;
+  color: #fff;
+  font-family: 'Roboto','Roboto Slab', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.form__button:hover {
+  cursor: pointer;
+  background-color: #347EFF;
+  transition: .3s;
+}
+
+.form__button:active {
+  background-color: #2A65CC;
+}
+
+@media screen and (max-width: 1090px){
+  .form__button {
+    padding: 16px 50px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form__button {
+    position: absolute;
+  }
+}

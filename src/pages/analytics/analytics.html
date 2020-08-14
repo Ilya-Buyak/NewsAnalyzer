@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Анализ новостей">
+  <meta name="keywords" content="news analyzer,news">
+  <meta name="author" content="Ilya Buyak">
+  <title>NewsAnalyzer | Аналитика</title>
+  <link rel="shortcut icon" href="<%= require('./../../images/fav.ico').default %>" type="image/x-icon">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.css %>">
+</head>
+<body class="root">
+<header class="header">
+  <a class="logo logo_black" href="./index.html">NewsAnalyzer</a>
+  <nav class="navigation">
+    <ul class="navigation__items">
+      <li class="navigation__item navigation__item_place-header">
+        <a class="navigation__link navigation__link_black navigation__link_place-header" href="./index.html">Главная</a>
+      </li>
+      <li class="navigation__item navigation__item_place-header">
+        <a class="navigation__link navigation__link_black navigation__link_place-header" href="./about.html">О проекте</a>
+      </li>
+    </ul>
+  </nav>
+</header>
+<div class="analytics">
+  <main class="analytics__container">
+    <nav class="analytics__navigation">
+        <p class="analytics__text"><a class="analytics__link" href="./index.html">Главная</a> / Аналитика</p>
+    </nav>
+    <h1 class="analytics__title">Вы спросили: «Путешествия»</h1>
+    <p class="analytics__paragraph">Новостей за неделю:
+      <span class="analytics__span">34 324</span>
+    </p>
+    <p class="analytics__paragraph">Упоминаний в загаловках:
+      <span class="analytics__span">235</span>
+    </p>
+  </main>
+  <section class="analytics__content">
+    <h2 class="analytics__details-title">Аналитика по дням</h2>
+    <div class="analytics__header">
+      <p class="analytics__header-text analytics__header-text_date">дата (август)</p>
+      <p class="analytics__header-text">кол-во упоминаний</p>
+    </div>
+
+    <div class="analytics__details">
+      <div class="analytics__percents">
+        <span>0</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+      <div class="analytics__diagram">
+        <p class="analytics__date">19,пн</p>
+        <div class="analytics__wrapper">
+          <span class="analytics__chart" style="width: 15%">15</span>
+        </div>
+      </div>
+      <div class="analytics__diagram">
+        <p class="analytics__date">20,вт</p>
+        <div class="analytics__wrapper">
+         <span class="analytics__chart" style="width: 18%">18</span>
+        </div>
+      </div>
+      <div class="analytics__diagram">
+        <p class="analytics__date">21,ср</p>
+        <div class="analytics__wrapper">
+          <span class="analytics__chart" style="width: 11%">11</span>
+        </div>
+      </div>
+      <div class="analytics__diagram">
+        <p class="analytics__date">22,чт</p>
+        <div class="analytics__wrapper">
+          <span class="analytics__chart" style="width: 39%">39</span>
+        </div>
+      </div>
+      <div class="analytics__diagram">
+        <p class="analytics__date">23,пт</p>
+        <div class="analytics__wrapper">
+         <span class="analytics__chart" style="width: 45%">45</span>
+        </div>
+      </div>
+      <div class="analytics__diagram">
+        <p class="analytics__date">24,сб</p>
+        <div class="analytics__wrapper">
+          <span class="analytics__chart" style="width: 73%">73</span>
+        </div>
+      </div>
+      <div class="analytics__diagram">
+        <p class="analytics__date">25,вс</p>
+        <div class="analytics__wrapper">
+          <span class="analytics__chart" style="width: 34%">34</span>
+        </div>
+      </div>
+
+      <div class="analytics__percents">
+        <span>0</span>
+        <span>25</span>
+        <span>50</span>
+        <span>75</span>
+        <span>100</span>
+      </div>
+    </div>
+  </section>
+</div>
+<footer class="footer">
+  <p class="footer__copyright"></p>
+  <nav class="navigation">
+    <ul class="navigation__items navigation__items_place-footer">
+      <li class="navigation__item ">
+        <a class="navigation__link navigation__link_place-footer" href="./index.html">Главная</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link navigation__link_place-footer" href="./about.html">О проекте</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link navigation__link_place-footer" href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a>
+      </li>
+    </ul>
+  </nav>
+  <ul class="footer__links">
+    <li class="footer__item">
+      <a class="footer__link" href="https://github.com/Ilya-Buyak" target="_blank">
+        <img class="footer__img" src="<%=require('./../../images/github.svg').default%>" alt="github">
+      </a>
+    </li>
+    <li class="footer__item">
+      <a class="footer__link" href="https://www.facebook.com/IlyaBuyak97" target="_blank">
+        <img class="footer__img" src="<%=require('./../../images/facebook.svg').default%>" alt="facebook">
+      </a>
+    </li>
+  </ul>
+</footer>
+<script src="<%= htmlWebpackPlugin.files.js %>"></script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.analytics__link {
+  color: #1A1B22;
+  text-decoration: none;
+}
+
+.analytics__link:hover {
+  opacity: .5;
+  transition: .3s;
+}

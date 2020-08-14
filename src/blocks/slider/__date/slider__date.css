@@ -1,0 +1,15 @@
+.slider__date {
+  font-family: 'Roboto','Roboto Slab',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  color: #B6BCBF;
+  margin: 0 0 16px 0;
+}
+
+@media screen and (max-width: 767px) {
+  .slider__date {
+    margin-bottom: 8px;
+  }
+}

@@ -1,0 +1,22 @@
+.analytics__percents {
+  margin: 16px 0 16px 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 120px);
+  font-family: 'Roboto','Roboto Slab',sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  color: #B6BCBF;
+}
+
+@media screen and (max-width: 767px){
+  .analytics__percents {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+.analytics__container {
+  padding: 40px 104px 80px 104px;
+}
+
+@media screen and (max-width: 1090px) {
+  .analytics__container {
+    padding: 32px 40px 40px 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .analytics__container {
+    padding: 16px 16px 24px 16px;
+  }
+}

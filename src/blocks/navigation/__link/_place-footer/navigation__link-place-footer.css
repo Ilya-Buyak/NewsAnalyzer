@@ -1,0 +1,11 @@
+@media screen and (max-width: 1090px){
+ .navigation__link.navigation__link_place-footer {
+   font-family: 'Source Sans Pro','Roboto',sans-serif;
+ }
+}
+@media screen and (max-width: 767px){
+  .navigation__link.navigation__link_place-footer {
+    font-size: 18px;
+    line-height: 48px;
+  }
+}

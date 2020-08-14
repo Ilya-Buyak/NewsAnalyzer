@@ -1,0 +1,15 @@
+.analytics__navigation {
+  margin-bottom: 80px;
+}
+
+@media screen and (max-width: 1090px) {
+  .analytics__navigation {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .analytics__navigation {
+    display: none;
+  }
+}

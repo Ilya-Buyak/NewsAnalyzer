@@ -1,0 +1,19 @@
+@import url(./_place-header/navigation__link_place-header.css);
+@import url(./_place-footer/navigation__link-place-footer.css);
+@import url(./_active/navigation__link_active.css);
+@import url(./_black/navigation__link_black.css);
+
+.navigation__link {
+  font-family: 'Roboto','Roboto Slab', sans-serif ;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1B22;
+  text-decoration: none;
+  margin: 0;
+}
+.navigation__link:hover {
+  opacity: .5;
+  transition: .3s;
+}
