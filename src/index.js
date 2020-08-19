@@ -38,7 +38,8 @@ const newsCardList = new NewsCardList({
 const formValidator = () => new FormValidator({
   error: ERROR,
   form: form,
-  component: formComponent
+  component: formComponent,
+  setFormButtonState: setFormButtonState
 }).formValidity()
 
 
