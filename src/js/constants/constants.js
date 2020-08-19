@@ -19,6 +19,10 @@ export const newsCardContainer = document.querySelector('.cards-items');
 export const showMoreNewsBtn = document.querySelector('.cards__button');
 export const formButton = document.querySelector('.form__button');
 export const commitsContainer = document.querySelector('.slider');
+export const preloader = document.querySelector('#preloader');
+export const notFoundSection = document.querySelector('#not-found');
+export const searchTitle = document.querySelector('.search-result__title');
+export const searchDescription = document.querySelector('.search-result__paragraph')
 
 //экземпляры классов
 export const currentDate = new Date().toISOString()

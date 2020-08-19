@@ -28,6 +28,8 @@ import {storage} from "./js/constants/constants";
 import {formComponent} from "./js/constants/constants";
 import {formButton} from "./js/constants/constants";
 import {ERROR_REQUEST_TEXT,ERROR_REQUEST_TITLE,ERROR_SEARCH_TEXT,ERROR_SEARCH_TITLE} from "./js/constants/constants";
+import {preloader,notFoundSection} from "./js/constants/constants";
+import {searchTitle,searchDescription} from "./js/constants/constants";
 
 const newsApi = new NewsApi(NEWS_API_URL);
 const setFormButtonState = new SetFormButtonState(formButton)
@@ -59,12 +61,8 @@ export function showMoreNews() {
 //отправка формы
 formComponent.addEventListener('submit',(evt) => {
   evt.preventDefault()
-  const preloader = document.querySelector('#preloader')
-  const notFoundSection = document.querySelector('#not-found')
   const keyWord = form.querySelector('.form__input').value
   const mainSection = document.querySelector('#cards')
-  const searchTitle = notFoundSection.querySelector('.search-result__title')
-  const searchDescription = notFoundSection.querySelector('.search-result__paragraph')
 
   notFoundSection.style.display = 'none'
   mainSection.style.display = 'none'
