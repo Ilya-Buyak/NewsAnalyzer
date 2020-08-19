@@ -11,8 +11,3 @@
   text-decoration: none;
   width: fit-content;
 }
-
-.card__source:hover {
-  opacity: .5;
-  transition: .5s;
-}

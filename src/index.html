@@ -20,7 +20,7 @@
               <p class="navigation__link navigation__link_place-header navigation__link_active">Главная</p>
             </li>
             <li class="navigation__item navigation__item_place-header">
-              <a class="navigation__link navigation__link_place-header" href="./about.html">О проекте</a>
+              <a class="navigation__link navigation__link_place-header" href="./pages/about/about.html">О проекте</a>
             </li>
           </ul>
         </nav>
@@ -30,56 +30,29 @@
           <h1 class="cover__title">Что в мире творится?</h1>
           <p class="cover__paragraph">Введите в поиске любую тему и узнайте, насколько популярной она была в новостях за прошедшую неделю.</p>
         </div>
-        <form class="form">
-          <input class="form__input" placeholder="Введите тему новости">
-          <button type="button" class="form__button">Искать</button>
+        <form class="form" novalidate>
+          <input class="form__input" placeholder="Введите тему новости" required>
+          <span class="form__error"></span>
+          <button type="submit" class="form__button">Искать</button>
         </form>
       </section>
     </div>
-    <section class="search-result">
+    <section class="search-result" id="preloader">
       <div class="preloader"></div>
       <h2 class="search-result__paragraph">Идет поиск новостей...</h2>
     </section>
-    <section class="search-result">
+    <section class="search-result" id="not-found">
       <div class="search-result__not-found"></div>
       <h2 class="search-result__title">Ничего не найдено</h2>
       <p class="search-result__paragraph">К сожалению по вашему запросу
         ничего не найдено.</p>
     </section>
-    <main class="search-result ">
+    <main class="search-result" id="cards">
       <div class="cards">
         <h2 class="cards__title">Результаты поиска</h2>
-        <a class="cards__link" href="./analytics.html">Посмотреть аналитику ></a>
+        <a class="cards__link" href="./pages/analytics/analytics.html">Посмотреть аналитику ></a>
       </div>
       <ul class="cards-items">
-        <li class="card">
-          <img src="<%=require('./images/image_08.png').default%>" class="card__img" alt="">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">Национальное достояние – парки</h3>
-            <p class="card__paragraph">В 2016 году Америка отмечала важный юбилей: сто лет назад здесь начала складываться система национальных парков – охраняемых территорий, где и сегодня каждый может приобщиться к природе.</p>
-          </div>
-          <a href="#" class="card__source">Лента.ру</a>
-        </li>
-        <li class="card">
-          <img src="<%=require('./images/image_04.png').default%>" class="card__img" alt="">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">Лесные огоньки: история одной фотографии</h3>
-            <p class="card__paragraph">Фотограф отвлеклась от освещения суровой политической реальности Мексики, чтобы запечатлеть ускользающую красоту одного
-              из местных чудес природы.</p>
-          </div>
-          <a href="#" class="card__source">Медуза</a>
-        </li>
-        <li class="card">
-          <img src="<%=require('./images/image_07.png').default%>" class="card__img" alt="">
-          <div class="card__container">
-            <p class="card__date">2 августа, 2019</p>
-            <h3 class="card__title">«Первозданная тайга»: новый фотопроект Игоря Шпиленка</h3>
-            <p class="card__paragraph">Знаменитый фотограф снимает первозданные леса России, чтобы рассказать о необходимости их сохранения. В этот раз он отправился в Двинско-Пинежскую тайгу, где...</p>
-          </div>
-          <a href="#" class="card__source">Риа</a>
-        </li>
       </ul>
       <button class="cards__button">Показать еще</button>
     </main>
@@ -101,7 +74,7 @@
             <a class="navigation__link navigation__link_place-footer" href="./index.html">Главная</a>
           </li>
           <li class="navigation__item">
-            <a class="navigation__link navigation__link_place-footer" href="./about.html">О проекте</a>
+            <a class="navigation__link navigation__link_place-footer" href="./pages/about/about.html">О проекте</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link navigation__link_place-footer" href="https://praktikum.yandex.ru/" target="_blank">Яндекс.Практикум</a>

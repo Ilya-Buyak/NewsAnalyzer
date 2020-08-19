@@ -1,5 +1,17 @@
 .card__img {
   width: 100%;
   border-radius: 10px 10px 0 0;
-  object-fit: cover;
+  height: 272px;
+}
+
+@media screen and (max-width: 1090px) {
+  .card__img {
+    max-height: 150px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .card__img {
+    max-height: 196px;
+  }
 }

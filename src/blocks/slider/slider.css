@@ -6,6 +6,7 @@
 @import url(./__title/slider__title.css);
 @import url(./__mail/slider__mail.css);
 @import url(./__paragraph/slider__paragraph.css);
+@import url(./__author/slider__author.css);
 
 .slider {
   width: calc(100% + 208px);
