@@ -4,7 +4,7 @@ import {addCopyrightText} from "./js/utils/copyright";
 import {sevenDaysAgo} from  "./js/utils/sevenDaysAgo";
 import {convertDate} from "./js/utils/convertDate";
 import {clearSection} from "./js/utils/clearSection";
-import {convertDateToCard} from "./js/utils/converDateToCard";
+import {convertDateToCard} from "./js/utils/convertDateToCard";
 import {checkImgUrl} from "./js/utils/checkImgUrl";
 import {checkShowMoreBtn} from "./js/utils/checkShowMoreBtn";
 
@@ -27,6 +27,7 @@ import {news} from "./js/constants/constants";
 import {storage} from "./js/constants/constants";
 import {formComponent} from "./js/constants/constants";
 import {formButton} from "./js/constants/constants";
+import {ERROR_REQUEST_TEXT,ERROR_REQUEST_TITLE,ERROR_SEARCH_TEXT,ERROR_SEARCH_TITLE} from "./js/constants/constants";
 
 const newsApi = new NewsApi(NEWS_API_URL);
 const setFormButtonState = new SetFormButtonState(formButton)
@@ -62,6 +63,8 @@ formComponent.addEventListener('submit',(evt) => {
   const notFoundSection = document.querySelector('#not-found')
   const keyWord = form.querySelector('.form__input').value
   const mainSection = document.querySelector('#cards')
+  const searchTitle = notFoundSection.querySelector('.search-result__title')
+  const searchDescription = notFoundSection.querySelector('.search-result__paragraph')
 
   notFoundSection.style.display = 'none'
   mainSection.style.display = 'none'
@@ -77,13 +80,16 @@ formComponent.addEventListener('submit',(evt) => {
       checkShowMoreBtn()
       if (!news.length) {
         notFoundSection.style.display = 'flex'
+        searchTitle.textContent = ERROR_SEARCH_TITLE
+        searchDescription.textContent = ERROR_SEARCH_TEXT
       } else {
         newsCardList.render(0,3,storage.getItems('news'))
         mainSection.style.display = 'flex'
       }
     })
-    .catch((err) => {
-      console.log(err)
+    .catch(() => {
+      searchTitle.textContent = ERROR_REQUEST_TITLE
+      searchDescription.textContent = ERROR_REQUEST_TEXT
   })
     .finally(() => {
       preloader.style.display = 'none';

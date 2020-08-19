@@ -17,7 +17,6 @@ export class NewsCard {
     this.description = this.cardElement.querySelector('.card__paragraph');
 
     this.title.textContent = this.card.title;
-    // this.image.src = ;
     this.cardDate.textContent = this.createDateToCard(this.card.publishedAt)
     this.cardLink.href = this.card.url
     this.cardSource.textContent = this.card.source.name
