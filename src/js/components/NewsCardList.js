@@ -7,8 +7,8 @@ export class NewsCardList {
   addCard (card) {
     this.container.appendChild(this.createCard(card))
   }
-  render (from,to,cards)  {
-    cards.slice(from,to).forEach((card) => {
+  render (firstCard,lastCard,cards)  {
+    cards.slice(firstCard,lastCard).forEach((card) => {
       this.addCard(card)
     })
   }

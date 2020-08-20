@@ -10,10 +10,11 @@ import {checkShowMoreBtn} from "./js/utils/checkShowMoreBtn";
 
 //классы
 import {NewsApi} from "./js/modules/NewsApi";
-import {FormValidator} from "./js/utils/FormValidator";
+import {FormValidator} from "./js/components/FormValidator";
 import {NewsCardList} from "./js/components/NewsCardList";
 import {NewsCard} from "./js/components/NewsCard";
-import {SetFormButtonState} from "./js/utils/SetFormButtonState";
+import {SetFormButtonState} from "./js/components/SetFormButtonState";
+import {DataStorage} from "./js/modules/DataStorage";
 
 //константы
 import {form} from "./js/constants/constants";
@@ -21,16 +22,18 @@ import {NEWS_API_KEY} from "./js/constants/constants";
 import {NEWS_API_URL} from "./js/constants/constants";
 import {newsCardContainer} from "./js/constants/constants";
 import {ERROR} from "./js/constants/constants";
-import {currentDate} from "./js/constants/constants";
 import {template} from "./js/constants/constants";
 import {news} from "./js/constants/constants";
-import {storage} from "./js/constants/constants";
-import {formComponent} from "./js/constants/constants";
 import {formButton} from "./js/constants/constants";
 import {ERROR_REQUEST_TEXT,ERROR_REQUEST_TITLE,ERROR_SEARCH_TEXT,ERROR_SEARCH_TITLE} from "./js/constants/constants";
 import {preloader,notFoundSection} from "./js/constants/constants";
 import {searchTitle,searchDescription} from "./js/constants/constants";
 
+const formInput = form.querySelector('.form__input')
+const mainSection = document.querySelector('#cards')
+
+const currentDate = new Date().toISOString()
+const storage = new DataStorage()
 const newsApi = new NewsApi(NEWS_API_URL);
 const setFormButtonState = new SetFormButtonState(formButton)
 const newsCardList = new NewsCardList({
@@ -41,7 +44,6 @@ const newsCardList = new NewsCardList({
 const formValidator = () => new FormValidator({
   error: ERROR,
   form: form,
-  component: formComponent,
   setFormButtonState: setFormButtonState
 }).formValidity()
 
@@ -51,29 +53,38 @@ function createNewsCard(...args) {
 }
 
 export function showMoreNews() {
-  newsCardList.render(news.from,news.to,storage.getItems('news'))
-  news.from += 3;
-  news.to += 3
+  newsCardList.render(news.firstCard,news.lastCard,storage.getItems('news'))
+  news.firstCard += 3;
+  news.lastCard += 3
 
   checkShowMoreBtn()
 }
 
+function loadPage() {
+  if (storage.getItems('news') != null && storage.getItems('news').length) {
+    clearSection(newsCardContainer,template)
+    newsCardList.render(0,3,storage.getItems('news'))
+    mainSection.style.display = 'flex'
+  }
+}
+
+
 //отправка формы
-formComponent.addEventListener('submit',(evt) => {
+form.addEventListener('submit',(evt) => {
   evt.preventDefault()
-  const keyWord = form.querySelector('.form__input').value
-  const mainSection = document.querySelector('#cards')
 
   notFoundSection.style.display = 'none'
   mainSection.style.display = 'none'
   preloader.style.display = 'flex'
   setFormButtonState.addClass()
+  storage.clear()
 
-  newsApi.getNews(keyWord,NEWS_API_KEY,convertDate(sevenDaysAgo(currentDate)),convertDate(currentDate))
+  newsApi.getNews(formInput.value,NEWS_API_KEY,convertDate(sevenDaysAgo(currentDate)),convertDate(currentDate))
     .then((res) => {
-      storage.clear()
       clearSection(newsCardContainer,template)
+      storage.setItems('keyWord',formInput.value)
       storage.setItems('news',res.articles)
+      storage.setItems('totalNews',res.totalResults)
       const news = storage.getItems('news')
       checkShowMoreBtn()
       if (!news.length) {
@@ -81,8 +92,7 @@ formComponent.addEventListener('submit',(evt) => {
         searchTitle.textContent = ERROR_SEARCH_TITLE
         searchDescription.textContent = ERROR_SEARCH_TEXT
       } else {
-        newsCardList.render(0,3,storage.getItems('news'))
-        mainSection.style.display = 'flex'
+        loadPage()
       }
     })
     .catch(() => {
@@ -91,10 +101,12 @@ formComponent.addEventListener('submit',(evt) => {
   })
     .finally(() => {
       preloader.style.display = 'none';
-      setFormButtonState.removeClass()
+      setFormButtonState.removeClass();
+      formInput.value = '';
     })
 })
 
+loadPage()
 addCopyrightText()
 formValidator()
 checkShowMoreBtn()

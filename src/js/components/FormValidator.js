@@ -2,7 +2,6 @@ export class FormValidator {
   constructor(options) {
     this.form = options.form
     this.error = options.error
-    this.component = options.component
     this.setFormButtonState = options.setFormButtonState
   }
 
@@ -40,6 +39,6 @@ export class FormValidator {
 
   formValidity() {
     this._setSubmitButtonState()
-    this.component.addEventListener('input', this._handleValidate.bind(this))
+    this.form.addEventListener('input', this._handleValidate.bind(this))
   }
 }

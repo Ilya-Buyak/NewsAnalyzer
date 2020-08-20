@@ -1,6 +1,3 @@
-import {DataStorage} from "../modules/DataStorage";
-import {BaseComponent} from "../components/BaseComponent";
-
 export const NEWS_API_KEY = 'ae6971aa95a34ef78aac37fb2a868bd5'
 export const NEWS_API_URL = 'https://nomoreparties.co/news/v2/everything';
 export const GITHUB_API_URL = 'https://api.github.com'
@@ -24,14 +21,9 @@ export const notFoundSection = document.querySelector('#not-found');
 export const searchTitle = document.querySelector('.search-result__title');
 export const searchDescription = document.querySelector('.search-result__paragraph')
 
-//экземпляры классов
-export const currentDate = new Date().toISOString()
-export const storage = new DataStorage();
-export const formComponent = new BaseComponent(form);
-export const showMoreComponent = new BaseComponent(showMoreNewsBtn);
 export const news = {
-  from: 3,
-  to: 6
+  firstCard: 3,
+  lastCard: 6
 }
 
 export const template = `<template id="NewsCard">
