@@ -15,7 +15,12 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'pages/[name]/[name].[chanckhash].js'
+    filename: 'js/[name].[chanckhash].js'
+  },
+  resolve: {
+    alias: {
+      images: path.resolve(__dirname, 'src/images'),
+    },
   },
   module: {
     rules: [{
@@ -35,7 +40,7 @@ module.exports = {
       {
         test: /\.(png|jpg|gif|ico|svg)$/,
         use: [
-          'file-loader?name=./../../images/[name].[ext]',
+          'file-loader?name=./images/[name].[ext]',
           {
             loader: 'image-webpack-loader',
             options: {
@@ -45,13 +50,13 @@ module.exports = {
       },
       {
         test: /\.(eot|ttf|woff|woff2)$/,
-        loader: 'file-loader?name=./../../vendor/[name].[ext]',
+        loader: 'file-loader?name=./vendor/[name].[ext]',
       },
     ]
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'pages/[name]/[name].[contenthash].css',
+      filename: 'styles/[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,
@@ -62,13 +67,13 @@ module.exports = {
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/pages/about/about.html',
-      filename: 'pages/about/about.html',
+      filename: 'about.html',
       chunks: ['about']
     }),
     new HtmlWebpackPlugin({
       inject: false,
       template: './src/pages/analytics/analytics.html',
-      filename: 'pages/analytics/analytics.html',
+      filename: 'analytics.html',
       chunks: ['analytics']
     }),
     new OptimizeCssAssetsPlugin({

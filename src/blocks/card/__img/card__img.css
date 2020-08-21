@@ -2,6 +2,9 @@
   width: 100%;
   border-radius: 10px 10px 0 0;
   height: 272px;
+  background-image: url('./../../../images/null.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 1090px) {

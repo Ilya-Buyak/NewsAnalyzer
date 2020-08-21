@@ -4,7 +4,4 @@ export function checkImgUrl(image,url) {
   img.onload = () => {
     return image.src = url
   };
-  img.onerror = function() {
-    return image.src = "./images/image_08.png"
-  };
 }

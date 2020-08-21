@@ -1,10 +1,8 @@
 import './style.css';
 //функции
 import {addCopyrightText} from "./js/utils/copyright";
-import {sevenDaysAgo} from  "./js/utils/sevenDaysAgo";
-import {convertDate} from "./js/utils/convertDate";
+import {sevenDaysAgo} from "./js/utils/sevenDaysAgo";
 import {clearSection} from "./js/utils/clearSection";
-import {convertDateToCard} from "./js/utils/convertDateToCard";
 import {checkImgUrl} from "./js/utils/checkImgUrl";
 import {checkShowMoreBtn} from "./js/utils/checkShowMoreBtn";
 
@@ -15,6 +13,7 @@ import {NewsCardList} from "./js/components/NewsCardList";
 import {NewsCard} from "./js/components/NewsCard";
 import {SetFormButtonState} from "./js/components/SetFormButtonState";
 import {DataStorage} from "./js/modules/DataStorage";
+import {Data} from "./js/components/Data";
 
 //константы
 import {form} from "./js/constants/constants";
@@ -32,6 +31,7 @@ import {searchTitle,searchDescription} from "./js/constants/constants";
 const formInput = form.querySelector('.form__input')
 const mainSection = document.querySelector('#cards')
 
+const data = new Data()
 const currentDate = new Date().toISOString()
 const storage = new DataStorage()
 const newsApi = new NewsApi(NEWS_API_URL);
@@ -49,7 +49,7 @@ const formValidator = () => new FormValidator({
 
 
 function createNewsCard(...args) {
-  return new NewsCard(...args,convertDateToCard,checkImgUrl).create()
+  return new NewsCard(...args,data.convertDateToCard,checkImgUrl).create()
 }
 
 export function showMoreNews() {
@@ -79,7 +79,7 @@ form.addEventListener('submit',(evt) => {
   setFormButtonState.addClass()
   storage.clear()
 
-  newsApi.getNews(formInput.value,NEWS_API_KEY,convertDate(sevenDaysAgo(currentDate)),convertDate(currentDate))
+  newsApi.getNews(formInput.value,NEWS_API_KEY,data.convertDate(sevenDaysAgo(currentDate)),data.convertDate(currentDate))
     .then((res) => {
       clearSection(newsCardContainer,template)
       storage.setItems('keyWord',formInput.value)
