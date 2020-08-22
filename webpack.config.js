@@ -15,12 +15,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name].[chanckhash].js'
-  },
-  resolve: {
-    alias: {
-      images: path.resolve(__dirname, 'src/images'),
-    },
+    filename: 'pages/[name]/name.[chanckhash].js'
   },
   module: {
     rules: [{
@@ -30,7 +25,13 @@ module.exports = {
     },
       {
         test: /\.css$/i,
-        use: [isDev ? 'style-loader' : MiniCssExtractPlugin.loader, {
+        use: [isDev ? 'style-loader' : {
+          loader: MiniCssExtractPlugin.loader,
+          options: {
+            publicPath: '../../'
+          }
+        },
+          {
           loader: "css-loader",
           options: {
             importLoaders: 2
@@ -56,7 +57,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'styles/[name].[contenthash].css',
+      filename: './pages/[name]/[name].[contenthash].css',
     }),
     new HtmlWebpackPlugin({
       inject: false,

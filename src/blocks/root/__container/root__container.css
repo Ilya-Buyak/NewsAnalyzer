@@ -1,4 +1,4 @@
 .root__container {
-  background-image: url("./../../../../src/images/cover.jpg");
+  background-image: url('./../../../images/cover.jpg');
   background-size: cover;
 }
