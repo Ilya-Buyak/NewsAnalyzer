@@ -63,15 +63,11 @@ export class Statistics {
     _getAllMentions(article) {
       let descriptionCounter = 0
       let titleCounter = 0
-      if (!article.description) {
-        descriptionCounter = 1
-      } else {
-       descriptionCounter =  article.description.match(this.regExp) === null ? 0 : article.description.match(this.regExp).length;
+      if (article.description) {
+        descriptionCounter =  article.description.match(this.regExp) === null ? 0 : article.description.match(this.regExp).length;
       }
       if (!article.title) {
-        descriptionCounter = 1
-      } else {
-        titleCounter =  article.title.match(this.regExp) === null ? 0 : article.title.match(this.regExp).length;
+        titleCounter = article.title.match(this.regExp) === null ? 0 : article.title.match(this.regExp).length;
       }
       return titleCounter + descriptionCounter
   }

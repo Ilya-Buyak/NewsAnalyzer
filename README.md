@@ -7,7 +7,7 @@ https://ilya-buyak.github.io/NewsAnalyzer/
 HTML/CSS, JavaScript, Webpack
 
 ## Версия: 
-0.0.2
+0.0.4
 ## Инструкция по установке проекта
 ### склонировать репозиторий
 ```
