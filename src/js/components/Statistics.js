@@ -63,10 +63,10 @@ export class Statistics {
     _getAllMentions(article) {
       let descriptionCounter = 0
       let titleCounter = 0
-      if (!article.description) {
+      if (article.description) {
         descriptionCounter =  article.description.match(this.regExp) === null ? 0 : article.description.match(this.regExp).length;
       }
-      if (!article.title) {
+      if (article.title) {
         titleCounter =  article.title.match(this.regExp) === null ? 0 : article.title.match(this.regExp).length;
       }
       return titleCounter + descriptionCounter
