@@ -1,16 +1,13 @@
 import './style.css'
+import {addCopyrightText} from "../../js/utils/copyright";
+import {loadCommits} from "../../js/utils/loadCommits";
+import {CommitCard} from "../../js/components/CommitCard";
+import {Data} from "../../js/components/Data";
 
-const copyright = document.querySelector('.footer__copyright');
-copyright.textContent = `© ${new Date().getFullYear()} Supersite`
-// на следующем этапе перенесется в отдельный js файл
-function sliderInitialization() {
-  let Flickity = require('flickity');
-  let flkty = new Flickity( '.slider', {
-    freeScroll: true,
-    wrapAround:  true,
-    initialIndex: 6,
-    groupCells: true
-  });
+const data = new Data()
+export function createCommit(...args) {
+ return new CommitCard(...args,data.convertDateToCard).create()
 }
 
-sliderInitialization()
+loadCommits()
+addCopyrightText()

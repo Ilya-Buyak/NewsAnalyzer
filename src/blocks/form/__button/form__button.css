@@ -1,3 +1,5 @@
+@import url(./_disabled/form__button_disabled.css);
+
 .form__button {
   top: 0;
   right: 0;
